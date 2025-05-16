@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: integrate-keycloak
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8765/realms/identity-service
+
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/integrate_keycloak
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+identity-provider:
+  redirect_uri: http://localhost:3000/callback/keycloak
+  url: http://localhost:8765
+  grant_type: client_credentials
+  client_id: identity-client
+  client_secret: iWgasP7loQC8jCOSuiGphkr9kSRc6CPx
+  scope: openid
