@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import vn.khanhduc.integratekeycloak.dto.identity.Credential;
-import vn.khanhduc.integratekeycloak.dto.identity.TokenExchangeParam;
 import vn.khanhduc.integratekeycloak.dto.identity.UserCreationParam;
 import vn.khanhduc.integratekeycloak.dto.request.RegistrationRequest;
 import vn.khanhduc.integratekeycloak.dto.response.ProfileResponse;
@@ -102,7 +101,6 @@ public class ProfileService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public List<ProfileResponse> findAll() {
         return profileRepository.findAll().stream()
                 .map(profile -> ProfileResponse.builder()

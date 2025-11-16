@@ -1,4 +1,4 @@
-package vn.khanhduc.integratekeycloak.dto.identity;
+package vn.khanhduc.integratekeycloak.exception;
 
 import lombok.*;
 

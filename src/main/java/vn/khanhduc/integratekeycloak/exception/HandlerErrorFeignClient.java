@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import vn.khanhduc.integratekeycloak.dto.identity.KeyCloakError;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
